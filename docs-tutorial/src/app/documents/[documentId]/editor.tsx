@@ -13,6 +13,8 @@ import FontFamily from '@tiptap/extension-font-family'
 import Underline from '@tiptap/extension-underline';
 import ImageResize from "tiptap-extension-resize-image";
 import TextStyle from '@tiptap/extension-text-style'
+import { Color } from '@tiptap/extension-color'
+import Highlight from '@tiptap/extension-highlight'
 
 import {useEditorStore} from "@/store/use-editor-store";
 
@@ -51,6 +53,10 @@ export const Editor = () => {
         },
         extensions: [
             StarterKit,
+            Highlight.configure({
+                multicolor: true,
+            }),
+            Color,
             FontFamily,
             TextStyle,
             Image,
