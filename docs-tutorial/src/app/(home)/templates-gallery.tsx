@@ -1,12 +1,13 @@
 "use client";
 
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
-import { cn } from "@/lib/utils";
-import { templates } from "@/constants/templates";
+import {cn} from "@/lib/utils";
+import {templates} from "@/constants/templates";
 import {useMutation} from "convex/react";
 import {useRouter} from "next/navigation";
 import {api} from "../../../convex/_generated/api";
 import {useState} from "react";
+import {toast} from "sonner";
 
 export const TemplatesGallery = () => {
     const router = useRouter();
@@ -15,9 +16,12 @@ export const TemplatesGallery = () => {
 
     const onTemplateClick = (title: string, initialContent: string) => {
         setIsCreating(true);
-        create({title, initialContent}).then((documentId) => {
-            router.push(`/documents/${documentId}`);
-        })
+        create({title, initialContent})
+            .catch(() => toast.error("Something went wrong"))
+            .then((documentId) => {
+                toast.success("Document created.");
+                router.push(`/documents/${documentId}`);
+            })
             .finally(() => {
                 setIsCreating(false);
             });
