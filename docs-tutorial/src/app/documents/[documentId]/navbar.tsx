@@ -99,7 +99,7 @@ export const Navbar = ({data}: NavbarProps) => {
     };
 
     return (
-        <nav className="flex items-center jsutify-between">
+        <nav className="flex items-center justify-between">
             <div className="flex gap-2 items-center">
                 <Link href="/">
                     <Image src="/logo.svg" width={36} height={36} alt="logo"/>
@@ -251,7 +251,7 @@ export const Navbar = ({data}: NavbarProps) => {
                     </div>
                 </div>
             </div>
-            <div className="flex gap-3 items-center">
+            <div className="flex gap-3 items-center ">
                 <Avatars/>
                 <Inbox/>
                 <OrganizationSwitcher
