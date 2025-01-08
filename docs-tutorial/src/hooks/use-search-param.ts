@@ -1,5 +1,4 @@
-import { parseAsString, useQueryState } from "nuqs";
-import {useState} from "react";
+import {parseAsString, useQueryState} from "nuqs";
 
 export function useSearchParam() {
     return useQueryState(

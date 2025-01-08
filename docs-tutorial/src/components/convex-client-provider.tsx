@@ -1,9 +1,9 @@
 "use client";
 
-import {ConvexReactClient, Authenticated, Unauthenticated, AuthLoading} from "convex/react";
 import {ReactNode} from "react";
+import {ClerkProvider, useAuth, SignIn} from "@clerk/clerk-react";
+import {ConvexReactClient, Authenticated, Unauthenticated, AuthLoading} from "convex/react";
 import {ConvexProviderWithClerk} from "convex/react-clerk";
-import {ClerkProvider, useAuth, SignIn} from "@clerk/nextjs";
 import {FullscreenLoader} from "@/components/fullscreen-loader";
 
 const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);

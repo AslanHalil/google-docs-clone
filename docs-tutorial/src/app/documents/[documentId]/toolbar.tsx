@@ -1,27 +1,38 @@
 "use client"
 
 import {
-    AlignCenterIcon, AlignJustifyIcon,
-    AlignLeftIcon, AlignRightIcon,
-    BoldIcon, ChevronDownIcon, HighlighterIcon, ImageIcon,
-    ItalicIcon, Link2Icon, ListCollapseIcon, ListIcon, ListOrderedIcon, ListTodoIcon,
-    LucideIcon, MessageSquarePlusIcon, MinusIcon, PlusIcon,
+    AlignCenterIcon,
+    AlignJustifyIcon,
+    AlignLeftIcon,
+    AlignRightIcon,
+    BoldIcon,
+    ChevronDownIcon,
+    HighlighterIcon,
+    ImageIcon,
+    ItalicIcon,
+    Link2Icon,
+    ListCollapseIcon,
+    ListIcon,
+    ListOrderedIcon,
+    ListTodoIcon,
+    LucideIcon,
+    MessageSquarePlusIcon,
+    MinusIcon,
+    PlusIcon,
     PrinterIcon,
-    Redo2Icon, RemoveFormattingIcon, SearchIcon,
+    Redo2Icon,
+    RemoveFormattingIcon,
+    SearchIcon,
     SpellCheckIcon,
     UnderlineIcon,
-    Undo2Icon, UploadIcon
+    Undo2Icon,
+    UploadIcon
 } from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useEditorStore} from "@/store/use-editor-store";
 import {Separator} from "@/components/ui/separator";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
-import {type ColorResult, CirclePicker, SketchPicker} from "react-color";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {type ColorResult, SketchPicker} from "react-color";
 import {type Level} from "@tiptap/extension-heading";
 import {useState} from "react";
 import {Input} from "@/components/ui/input";
