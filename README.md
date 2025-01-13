@@ -10,6 +10,12 @@ The document editor provides robust customization options.
 Add headers, lists, checklists, tables, pictures, and more. You can also adjust margins 
 and fully customize text to suit your needs.  </p>
 
+<h2>The app has now been deployed on Vercel and can now be accessed here:</h2>
+
+https://google-docs-clone-ns3z.vercel.app/
+
+To use it, simply use a google/gmail account.
+
 <div>
 Tools used:
 <ul>
